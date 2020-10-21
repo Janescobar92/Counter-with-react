@@ -1,24 +1,18 @@
 import React from "react";
 
+import { Mycounter } from "./counter.jsx";
+
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
+import { MyCounter } from "./counter.jsx";
 
 //create your first component
 export function Home() {
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+	const numberOfBoxes = 4;
+	const items = [];
+	for (let i = 0; i < numberOfBoxes; i++) {
+		items.push(<MyCounter />);
+	}
+
+	return <div className="mt-5 d-flex justify-content-center">{items}</div>;
 }
