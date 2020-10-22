@@ -7,6 +7,8 @@ import rigoImage from "../../img/rigo-baby.jpg";
 
 import { MyCounter } from "./counter.jsx";
 
+import { MyButton } from "./button.jsx";
+
 //create your first component
 export function Home() {
 	const numberOfBoxes = 4;
@@ -16,5 +18,10 @@ export function Home() {
 		items.push(<MyCounter seconder={tickers[i]} />);
 	}
 
-	return <div className="mt-5 d-flex justify-content-center">{items}</div>;
+	return (
+		<div>
+			<div className="mt-5 d-flex justify-content-center">{items}</div>
+			<MyButton />
+		</div>
+	);
 }

@@ -8,7 +8,6 @@ export const MyCounter = props => {
 		const interval = setInterval(() => {
 			setTimer(seconds => seconds + 1);
 		}, props.seconder);
-		return () => clearInterval(interval);
 	}, []);
 
 	return (
