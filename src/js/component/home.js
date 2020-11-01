@@ -13,15 +13,20 @@ import { MyButton } from "./button.jsx";
 export function Home() {
 	const numberOfBoxes = 4;
 	const items = [];
-	const tickers = [100000, 10000, 1000, 100];
+	const tickers = [1000000, 100000, 10000, 1000];
 	for (let i = 0; i < numberOfBoxes; i++) {
 		items.push(<MyCounter seconder={tickers[i]} />);
+	}
+	function refreshPage() {
+		window.location.reload(false);
 	}
 
 	return (
 		<div>
 			<div className="mt-5 d-flex justify-content-center">{items}</div>
-			<MyButton />
+			<div onClick={refreshPage}>
+				<MyButton />
+			</div>
 		</div>
 	);
 }

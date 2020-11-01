@@ -12,7 +12,7 @@ export const MyCounter = props => {
 
 	return (
 		<div className="numberBox text-center">
-			<span>{timer % 10}</span>
+			<span className="numbers">{timer % 10}</span>
 		</div>
 	);
 };

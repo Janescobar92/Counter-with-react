@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 export const MyButton = props => {
 	return (
 		<div className="d-flex justify-content-center">
-			<Button variant="dark">Reset</Button>
+			<Button variant="btn btn-outline-dark">Reset</Button>
 		</div>
 	);
 };
